@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWalkingState : PlayerBaseState
@@ -7,11 +5,11 @@ public class PlayerWalkingState : PlayerBaseState
     public PlayerWalkingState(PlayerStateMachine stateMachine, CharacterController characterController, InputHandler inputHandler)
     : base(stateMachine, characterController, inputHandler) { }
 
+    private readonly float movementSpeed = 7f;
+
     public override void EnterState()
     {
         //start walking animation
-
-        movementSpeed = 7f;
     }
 
     public override void ExitState()

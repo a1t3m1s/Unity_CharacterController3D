@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
@@ -28,5 +26,10 @@ public class InputHandler : MonoBehaviour
     public Vector2 GetInputVector()
     {
         return inputActions.Player.Movement.ReadValue<Vector2>();
+    }
+
+    public float GetMouseScroll()
+    {
+        return inputActions.Player.Zoom.ReadValue<float>();
     }
 }

@@ -1,17 +1,14 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(InputHandler))]
 public class PlayerStateMachine : MonoBehaviour
 {
-    [Header("Camera Transform")]
+    [Header("Serialized Fields")]
     public Transform playerCameraTransform;
+    [field: SerializeField]
+    private InputHandler inputHandler;
 
     private CharacterController characterController;
-    private InputHandler inputHandler;
 
     private PlayerBaseState currentState;
 
@@ -22,7 +19,6 @@ public class PlayerStateMachine : MonoBehaviour
     private void OnEnable()
     {
         characterController = GetComponent<CharacterController>();
-        inputHandler = GetComponent<InputHandler>();
 
         idlingState = new PlayerIdlingState(this, characterController, inputHandler);
         walkingState = new PlayerWalkingState(this, characterController, inputHandler);

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerJumpingState : PlayerBaseState
@@ -8,6 +5,7 @@ public class PlayerJumpingState : PlayerBaseState
     public PlayerJumpingState(PlayerStateMachine stateMachine, CharacterController characterController, InputHandler inputHandler)
     : base(stateMachine, characterController, inputHandler) { }
 
+    private readonly float movementSpeed = 5f;
     private readonly float jumpHeight = 2f;
     private readonly float gravity = -9.81f;
     
@@ -17,7 +15,6 @@ public class PlayerJumpingState : PlayerBaseState
     {
         //start jumping or falling animation
 
-        movementSpeed = 5f;
         velocity = Vector3.zero;
     }
 

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class PlayerBaseState
@@ -7,11 +5,7 @@ public abstract class PlayerBaseState
     protected PlayerStateMachine playerStateMachine;
     protected CharacterController characterController;
     protected InputHandler inputHandler;
-     
-    protected float movementSpeed;
-
-    protected Vector3 inputMovement;
-    
+   
     public PlayerBaseState(PlayerStateMachine playerStateMachine, CharacterController characterController, InputHandler inputActions)
     {
         this.playerStateMachine = playerStateMachine;
