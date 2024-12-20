@@ -1,4 +1,4 @@
-# Unity_CharacterController
+# Unity_CharacterController3D
 This is my simple State Machine Character Controller.
 
 For nowadays version this State Machine has 3 states:
